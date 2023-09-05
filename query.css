@@ -1,0 +1,31 @@
+@media only screen and (max-width: 550px) {
+    
+    div.container {
+        width: 95%;
+    }
+    div.wrap {
+        padding: 25px 15px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    
+    label:is([for="name"],[for="mail"], #passw2){
+        display: none !important;
+    }
+
+    .box{
+        text-align: center;
+    }
+    .box-wrap{
+        justify-content: center;
+    }
+    input:not([type="radio"]):not([type="checkbox"]) {
+        width: 240px;
+    }
+    select#choose {
+        width: 170px;
+    }
+
+}

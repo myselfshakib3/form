@@ -1,0 +1,190 @@
+@import url('./fonts.css');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: inter-600;
+    user-select: none;
+}
+
+
+section#form{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(#00000025, #00000025), url(./blur.jpg) no-repeat center / cover;
+}
+div.container {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background: #00000090;
+    border-radius: 10px;
+}
+div.wrap{
+    padding: 30px 50px;
+}
+
+
+form h4 {
+    position: absolute;
+    left: 8%;
+    top: -3%;
+    background: #fff700;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 7px 2px #00000025;
+}
+form h4::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -12%;
+    border-bottom: 17px solid #bdb700;
+    border-left: 10px solid #ff000000;
+}
+div.box {
+    padding: 15px 0;
+}
+div.box-wrap {
+    display: flex;
+    align-items: center;
+}
+div.box:last-child{
+    position: relative;
+}
+
+div.box label, h3 {
+    padding: 5px;
+    color: #ffffff;
+}
+input:is([type="radio"],[type="checkbox"]) ~ label{
+    padding-left: 10px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+div.box h3 {
+    padding-bottom: 15px;
+    color: #ffd402;
+    letter-spacing: 1px;
+}
+
+
+input:not([type="radio"]):not([type="checkbox"]) {
+    width: 280px;
+    padding: 13px;
+    outline: none;
+    font-size: 14px;
+    font-family: inter-500;
+    background: #00000065;
+    color: #fff700;
+    caret-color: #fff700;
+    letter-spacing: 1px;
+    border: 1px solid #00000000;
+    outline: 1px solid #00000000;
+    transition: all .15s ease-in;
+}
+input[type="password"]{
+    padding: 20px 10px 5px 10px !important;
+}
+input:not([type="radio"]):not([type="checkbox"]):focus{
+    border: 1px solid #fff700b5;
+}
+input:not([type="radio"]):not([type="checkbox"])::placeholder{
+    color: #fff;
+    font-family: inter-400;
+}
+
+
+input:is([type="radio"],[type="checkbox"]){
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #00000065;
+    border: 1px solid #fff;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+input[type="radio"] {
+    border-radius: 100%;
+}
+input:is([type="radio"],[type="checkbox"])::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: #ffd402;
+    border-radius: 100%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .15s ease-in;
+}
+input[type="radio"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+input[type="checkbox"]{
+    border-radius: 5px;
+}
+input[type="checkbox"]::before {
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scaleY(0);
+    transform-origin: top;
+}
+input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) scaleY(1);
+}
+
+label#chsLb {
+    padding: 8.5px;
+    color: #000;
+    font-size: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #fff700;
+}
+
+select#choose {
+    appearance: none;
+    width: 200px;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    outline: none;
+    background: #fff700;
+    font-family: inter-600;
+    font-size: 15px;
+    cursor: pointer;
+}
+select#choose option{
+    background: #131313;
+    color: #fff;
+    padding-left: 0;
+}
+
+label#totop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-62%, -50%) scale(1);
+    font-size: 15px;
+    font-family: inter-400;
+    user-select: none;
+    cursor: text;
+    transition: all .3s ease-in;
+}
+
+input[type="password"]:focus ~ label#totop{
+    transform: translate(-73%, -95%) scale(.75);
+}
